@@ -1,0 +1,42 @@
+# Bell Labs — starship, "term" style: rc on a Plan 9 terminal.
+#
+# A terminal printed `term% `, a CPU server `cpu% `. The directory goes on
+# its own line above, as in the rc style.
+add_newline = true
+format = "$directory$git_branch$git_status$cmd_duration$line_break$character"
+
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style) "
+style = "bold {{foreground}}"
+read_only = " ro"
+read_only_style = "{{red}}"
+truncation_length = 4
+truncation_symbol = "…/"
+
+[git_branch]
+format = "[\\($branch\\)]($style)"
+style = "{{foreground_dim}}"
+
+[git_status]
+format = "[$all_status$ahead_behind]($style) "
+style = "{{red}}"
+modified = "*"
+untracked = "?"
+staged = "+"
+deleted = "-"
+renamed = ">"
+stashed = "$"
+ahead = "↑${count}"
+behind = "↓${count}"
+diverged = "↕"
+conflicted = "!"
+
+[cmd_duration]
+min_time = 2000
+format = "[$duration]($style)"
+style = "{{foreground_dim}}"
+
+[character]
+success_symbol = "[term%](bold {{accent}})"
+error_symbol = "[term%](bold {{red}})"
+vimcmd_symbol = "[:](bold {{accent}})"

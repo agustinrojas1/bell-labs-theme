@@ -1,0 +1,59 @@
+# Bell Labs — single source of truth.
+#
+# Interface colours are the literal values from Plan 9's libdraw (draw.h)
+# as acme and rio use them. The ANSI ramp is tuned to stay readable on
+# acme's pale-yellow page while keeping to that same family of inks.
+# Every template under templates/ refers to these keys as {{key}}.
+# palettes/bell-labs-night.toml has the same keys for the dark variant.
+
+name            = "Bell Labs"
+mode            = "light"
+
+# ── surfaces ──────────────────────────────────────────────────────────
+background      = "#FFFFEA"  # acme body: DPaleyellow mixed 1:3 with white
+background_alt  = "#EAFFFF"  # acme tag:  DPalebluegreen mixed 1:3 with white
+background_dim  = "#F2F2D8"  # recessed panels, inactive tabs
+desktop         = "#777777"  # rio's desktop grey
+
+# ── ink ───────────────────────────────────────────────────────────────
+foreground      = "#000000"  # acme draws text in black
+foreground_dim  = "#55553A"  # secondary text, comments
+muted           = "#99994C"  # DYellowgreen: acme scrollbar and frame
+
+# ── interaction ───────────────────────────────────────────────────────
+selection       = "#EEEE9E"  # DDarkyellow: acme body selection
+selection_alt   = "#9EEEEE"  # DPalegreygreen: acme tag selection
+border_active   = "#8888CC"  # DPurpleblue: column and window frames
+border_inactive = "#C8C8A6"
+accent          = "#000099"  # DMedblue: acme's "modified" button, Bell navy
+cursor          = "#000000"
+
+# ── ANSI 0-7 ──────────────────────────────────────────────────────────
+black           = "#000000"
+red             = "#AA0000"  # acme button-2 (execute) red
+green           = "#006600"  # acme button-3 (look) green
+yellow          = "#7A6A00"
+blue            = "#000099"  # DMedblue
+magenta         = "#7A1F7A"
+cyan            = "#007070"
+white           = "#D6D6BE"
+
+# ── ANSI 8-15 ─────────────────────────────────────────────────────────
+bright_black    = "#777777"  # rio grey
+bright_red      = "#C42B2B"
+bright_green    = "#448844"  # DDarkgreen
+bright_yellow   = "#7F7F2A"  # DYellowgreen, darkened for text
+bright_blue     = "#005DBB"  # DGreyblue
+bright_magenta  = "#5C5CAA"  # DPurpleblue, darkened for text
+bright_cyan     = "#008888"  # DBluegreen
+bright_white    = "#FFFFFF"
+
+# ── diff backgrounds ──────────────────────────────────────────────────
+diff_add        = "#E2F5D8"
+diff_delete     = "#F8DEDA"
+
+# ── green-bar printout wallpaper ──────────────────────────────────────
+printout_paper  = "#FBFBF2"
+printout_bar    = "#DCEBD2"
+printout_rule   = "#B9C9B0"
+printout_ink    = "#2B2B33"

@@ -1,0 +1,43 @@
+# Bell Labs — starship, "rc" style: how Plan 9 people set up rc.
+#
+# rc's prompt is a variable, and many at the Labs set it to `; `. A `;` is an
+# empty command, so a whole line copied out of the terminal (prompt included)
+# can be pasted back and run as is. The directory goes on its own line above.
+add_newline = true
+format = "$directory$git_branch$git_status$cmd_duration$line_break$character"
+
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style) "
+style = "bold {{foreground}}"
+read_only = " ro"
+read_only_style = "{{red}}"
+truncation_length = 4
+truncation_symbol = "…/"
+
+[git_branch]
+format = "[\\($branch\\)]($style)"
+style = "{{foreground_dim}}"
+
+[git_status]
+format = "[$all_status$ahead_behind]($style) "
+style = "{{red}}"
+modified = "*"
+untracked = "?"
+staged = "+"
+deleted = "-"
+renamed = ">"
+stashed = "$"
+ahead = "↑${count}"
+behind = "↓${count}"
+diverged = "↕"
+conflicted = "!"
+
+[cmd_duration]
+min_time = 2000
+format = "[$duration]($style)"
+style = "{{foreground_dim}}"
+
+[character]
+success_symbol = "[;](bold {{accent}})"
+error_symbol = "[;](bold {{red}})"
+vimcmd_symbol = "[:](bold {{accent}})"

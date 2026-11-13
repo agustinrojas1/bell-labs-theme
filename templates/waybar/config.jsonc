@@ -1,0 +1,34 @@
+// Bell Labs — waybar. Plain-text labels styled after an acme tag line.
+// On Hyprland, replace "niri/" with "hyprland/" in the module names.
+{
+  "layer": "top",
+  "position": "top",
+  "height": 22,
+  "spacing": 0,
+  "modules-left": ["niri/workspaces", "niri/window"],
+  "modules-right": ["pulseaudio", "network", "battery", "clock"],
+
+  "niri/workspaces": { "format": "{index}" },
+  "niri/window": { "format": "{title}", "max-length": 80, "icon": false },
+
+  "pulseaudio": {
+    "format": "vol {volume}%",
+    "format-muted": "vol mute",
+    "on-click": "pavucontrol"
+  },
+  "network": {
+    "format-wifi": "net {essid}",
+    "format-ethernet": "net wired",
+    "format-disconnected": "net down",
+    "tooltip-format": "{ifname} {ipaddr}"
+  },
+  "battery": {
+    "format": "bat {capacity}%",
+    "format-charging": "bat {capacity}%+",
+    "states": { "low": 15 }
+  },
+  "clock": {
+    "format": "{:%a %d %b %H:%M}",
+    "tooltip-format": "<tt>{calendar}</tt>"
+  }
+}

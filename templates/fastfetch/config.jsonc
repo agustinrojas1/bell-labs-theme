@@ -1,0 +1,172 @@
+// Bell Labs — fastfetch, laid out like a Bell System service record.
+// Each label carries an icon from Bell Labs history: the classic telephone and
+// rotary dial (the Bell System), the integrated circuit (the transistor, 1947),
+// tape and drum stores, the UNIX mark, the Teletype printer, the Go gopher
+// (Go Mono, by Bigelow & Holmes), Long Lines towers and Shannon's sine wave.
+// The logo sits next to this file: ~/.config/fastfetch/bell-labs-logo.txt
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "file",
+    "source": "~/.config/fastfetch/bell-labs-logo.txt",
+    "color": {
+      "1": "{{accent}}"
+    },
+    "padding": {
+      "top": 3,
+      "left": 1,
+      "right": 3
+    }
+  },
+  "display": {
+    "separator": "",
+    "color": {
+      "keys": "bold_{{accent}}",
+      "output": "{{foreground}}",
+      "separator": "{{foreground}}"
+    },
+    "key": {
+      "width": 18
+    },
+    "percent": {
+      "type": 3,
+      "color": {
+        "green": "{{green}}",
+        "yellow": "{{yellow}}",
+        "red": "{{red}}"
+      }
+    },
+    "size": {
+      "binaryPrefix": "jedec"
+    },
+    "disableLinewrap": true
+  },
+  "modules": [
+    {
+      "type": "custom",
+      "format": "{#38;2;{{border_active.rgb}}}󰂞{#} {#1;38;2;{{accent.rgb}}}BELL LABORATORIES"
+    },
+    {
+      "type": "custom",
+      "format": "  COMPUTING SYSTEMS DIVISION",
+      "outputColor": "{{foreground_dim}}"
+    },
+    {
+      "type": "custom",
+      "format": "════════════════════════════════════════════════",
+      "outputColor": "{{border_active}}"
+    },
+    {
+      "type": "command",
+      "key": "{#38;2;{{border_active.rgb}}}󰘂{#} {#1;38;2;{{accent.rgb}}}SUBSCRIBER",
+      "text": "printf '%s@%s' \"$USER\" \"$(cat /etc/hostname 2>/dev/null || hostname)\""
+    },
+    {
+      "type": "command",
+      "key": "{#38;2;{{border_active.rgb}}}󱕙{#} {#1;38;2;{{accent.rgb}}}INSTALLATION",
+      "text": "id=$(cat /etc/machine-id 2>/dev/null || echo 00000000); printf '%02d-%04d' $((0x${id:0:4} % 100)) $((0x${id:4:4} % 10000))"
+    },
+    {
+      "type": "custom",
+      "format": "── EQUIPMENT ───────────────────────────────────",
+      "outputColor": "{{muted}}"
+    },
+    {
+      "type": "cpu",
+      "key": "{#38;2;{{border_active.rgb}}}󱤓{#} {#1;38;2;{{accent.rgb}}}PROCESSOR",
+      "format": "{name} ×{cores-logical}"
+    },
+    {
+      "type": "gpu",
+      "key": "{#38;2;{{border_active.rgb}}}󱑽{#} {#1;38;2;{{accent.rgb}}}GRAPHICS UNIT",
+      "format": "{name}",
+      "detectionMethod": "pci"
+    },
+    {
+      "type": "display",
+      "key": "{#38;2;{{border_active.rgb}}}󰟴{#} {#1;38;2;{{accent.rgb}}}DISPLAY",
+      "format": "{width}×{height} at {refresh-rate} Hz"
+    },
+    {
+      "type": "memory",
+      "key": "{#38;2;{{border_active.rgb}}}󰍛{#} {#1;38;2;{{accent.rgb}}}CORE STORE",
+      "format": "{used} of {total} {percentage}"
+    },
+    {
+      "type": "swap",
+      "key": "{#38;2;{{border_active.rgb}}}󰋊{#} {#1;38;2;{{accent.rgb}}}DRUM STORE",
+      "format": "{used} of {total} {percentage}"
+    },
+    {
+      "type": "disk",
+      "key": "{#38;2;{{border_active.rgb}}}󱛟{#} {#1;38;2;{{accent.rgb}}}MASS STORE",
+      "folders": "/",
+      "format": "{size-used} of {size-total} {size-percentage}"
+    },
+    {
+      "type": "custom",
+      "format": "── SOFTWARE ────────────────────────────────────",
+      "outputColor": "{{muted}}"
+    },
+    {
+      "type": "os",
+      "key": "{#38;2;{{border_active.rgb}}}{#} {#1;38;2;{{accent.rgb}}}OPERATING SYS",
+      "format": "{pretty-name}"
+    },
+    {
+      "type": "kernel",
+      "key": "{#38;2;{{border_active.rgb}}}󰒓{#} {#1;38;2;{{accent.rgb}}}KERNEL",
+      "format": "{sysname} {release}"
+    },
+    {
+      "type": "wm",
+      "key": "{#38;2;{{border_active.rgb}}}󰍹{#} {#1;38;2;{{accent.rgb}}}WINDOW SYSTEM",
+      "format": "{pretty-name}"
+    },
+    {
+      "type": "shell",
+      "key": "{#38;2;{{border_active.rgb}}}󰞷{#} {#1;38;2;{{accent.rgb}}}COMMAND INTERP",
+      "format": "{pretty-name} {version}"
+    },
+    {
+      "type": "terminal",
+      "key": "{#38;2;{{border_active.rgb}}}󰐪{#} {#1;38;2;{{accent.rgb}}}TERMINAL",
+      "format": "{pretty-name}"
+    },
+    {
+      "type": "terminalfont",
+      "key": "{#38;2;{{border_active.rgb}}}{#} {#1;38;2;{{accent.rgb}}}TYPEFACE",
+      "format": "{name}"
+    },
+    {
+      "type": "packages",
+      "key": "{#38;2;{{border_active.rgb}}}󰏖{#} {#1;38;2;{{accent.rgb}}}PROGRAMS"
+    },
+    {
+      "type": "custom",
+      "format": "── SERVICE ─────────────────────────────────────",
+      "outputColor": "{{muted}}"
+    },
+    {
+      "type": "uptime",
+      "key": "{#38;2;{{border_active.rgb}}}󰴾{#} {#1;38;2;{{accent.rgb}}}IN SERVICE"
+    },
+    {
+      "type": "custom",
+      "key": "{#38;2;{{border_active.rgb}}}󱌣{#} {#1;38;2;{{accent.rgb}}}MAINTENANCE",
+      "format": "CUSTOMER RESPONSIBILITY"
+    },
+    {
+      "type": "custom",
+      "key": "{#38;2;{{border_active.rgb}}}󰥛{#} {#1;38;2;{{accent.rgb}}}STATUS",
+      "format": "ALL SYSTEMS NOMINAL",
+      "outputColor": "bold_{{green}}"
+    },
+    "break",
+    {
+      "type": "colors",
+      "symbol": "block",
+      "paddingLeft": 18
+    }
+  ]
+}

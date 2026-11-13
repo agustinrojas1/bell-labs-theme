@@ -1,0 +1,37 @@
+# Bell Labs — Omarchy theme colours (rendered from palette.toml).
+mode = "{{mode}}"
+
+accent = "{{accent}}"
+selection = "{{selection}}"
+selection_foreground = "{{foreground}}"
+selection_background = "{{selection}}"
+muted = "{{bright_black}}"
+
+background = "{{background}}"
+dark_background = "{{background_dim}}"
+darker_background = "{{white}}"
+lighter_background = "{{background_alt}}"
+
+foreground = "{{foreground}}"
+dark_foreground = "{{foreground_dim}}"
+light_foreground = "{{foreground_dim}}"
+bright_foreground = "{{foreground}}"
+
+red = "{{red}}"
+yellow = "{{yellow}}"
+orange = "{{bright_red}}"
+green = "{{green}}"
+cyan = "{{cyan}}"
+blue = "{{blue}}"
+magenta = "{{magenta}}"
+brown = "{{foreground_dim}}"
+
+bright_red = "{{bright_red}}"
+bright_yellow = "{{bright_yellow}}"
+bright_green = "{{bright_green}}"
+bright_cyan = "{{bright_cyan}}"
+bright_blue = "{{bright_blue}}"
+bright_magenta = "{{bright_magenta}}"
+
+hyprland_active_border = "rgb({{border_active.hex}})"
+hyprland_inactive_border = "rgb({{border_inactive.hex}})"

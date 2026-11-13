@@ -1,0 +1,46 @@
+// Bell Labs — niri
+// niri ≥ 25.11: add `include "bell-labs.kdl"` to config.kdl.
+// Older niri: paste these blocks into config.kdl instead.
+
+prefer-no-csd
+
+layout {
+    gaps 6
+    background-color "{{desktop}}"
+
+    // rio draws a plain frame around each window, so use border and turn the ring off
+    focus-ring { off; }
+
+    border {
+        width 3
+        active-color "{{border_active}}"
+        inactive-color "{{border_inactive}}"
+        urgent-color "{{red}}"
+    }
+
+    shadow { off; }
+
+    insert-hint {
+        color "{{border_active}}80"
+    }
+
+    tab-indicator {
+        active-color "{{accent}}"
+        inactive-color "{{muted}}"
+        width 4
+        gap 4
+        corner-radius 0
+    }
+}
+
+overview {
+    backdrop-color "{{desktop}}"
+}
+
+window-rule {
+    geometry-corner-radius 0
+    clip-to-geometry true
+}
+
+// rio had no animations. Uncomment for the full experience:
+// animations { off; }

@@ -1,0 +1,57 @@
+# Bell Labs — Alacritty
+[font]
+size = 11.0
+normal = { family = "GoMono Nerd Font", style = "Regular" }
+bold   = { family = "GoMono Nerd Font", style = "Bold" }
+italic = { family = "GoMono Nerd Font", style = "Italic" }
+
+[window]
+padding = { x = 10, y = 8 }
+decorations = "None"
+
+[cursor]
+style = { shape = "Block", blinking = "Off" }
+
+[colors.primary]
+background = "{{background}}"
+foreground = "{{foreground}}"
+
+[colors.cursor]
+text = "{{background}}"
+cursor = "{{cursor}}"
+
+[colors.selection]
+text = "{{foreground}}"
+background = "{{selection}}"
+
+[colors.search.matches]
+foreground = "{{foreground}}"
+background = "{{selection_alt}}"
+
+[colors.search.focused_match]
+foreground = "{{background}}"
+background = "{{accent}}"
+
+[colors.footer_bar]
+foreground = "{{foreground}}"
+background = "{{background_alt}}"
+
+[colors.normal]
+black   = "{{black}}"
+red     = "{{red}}"
+green   = "{{green}}"
+yellow  = "{{yellow}}"
+blue    = "{{blue}}"
+magenta = "{{magenta}}"
+cyan    = "{{cyan}}"
+white   = "{{white}}"
+
+[colors.bright]
+black   = "{{bright_black}}"
+red     = "{{bright_red}}"
+green   = "{{bright_green}}"
+yellow  = "{{bright_yellow}}"
+blue    = "{{bright_blue}}"
+magenta = "{{bright_magenta}}"
+cyan    = "{{bright_cyan}}"
+white   = "{{bright_white}}"

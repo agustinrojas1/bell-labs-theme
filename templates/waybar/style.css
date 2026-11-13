@@ -1,0 +1,56 @@
+/* Bell Labs — waybar */
+* {
+  font-family: "GoMono Nerd Font", monospace;
+  font-size: 13px;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+window#waybar {
+  background: {{background_alt}};
+  color: {{foreground}};
+  border-bottom: 2px solid {{border_active}};
+}
+
+tooltip {
+  background: {{background}};
+  color: {{foreground}};
+  border: 2px solid {{border_active}};
+}
+
+#workspaces button {
+  padding: 0 7px;
+  color: {{foreground}};
+  background: transparent;
+}
+#workspaces button.active,
+#workspaces button.focused {
+  background: {{selection_alt}};
+}
+#workspaces button.urgent {
+  background: {{red}};
+  color: {{background}};
+}
+#workspaces button:hover {
+  background: {{selection}};
+}
+
+#window {
+  padding: 0 12px;
+}
+
+#pulseaudio,
+#network,
+#battery,
+#clock {
+  padding: 0 10px;
+}
+
+#battery.low:not(.charging),
+#pulseaudio.muted,
+#network.disconnected {
+  color: {{red}};
+}

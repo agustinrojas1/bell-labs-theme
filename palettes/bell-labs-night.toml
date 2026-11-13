@@ -1,0 +1,57 @@
+# Bell Labs Night — the same Plan 9 inks, after hours.
+#
+# In the light theme Plan 9's pastels are the paper. Here they become the
+# ink: DPaleyellow, DPalegreygreen, DPurpleblue and DPalegreen written on a
+# deep Bell-System navy. Same keys as bell-labs.toml.
+
+name            = "Bell Labs Night"
+mode            = "dark"
+
+# ── surfaces ──────────────────────────────────────────────────────────
+background      = "#0E1430"  # Bell navy, taken down to night
+background_alt  = "#17204A"  # tag line: the navy one step lighter
+background_dim  = "#0A0F24"  # recessed panels
+desktop         = "#2B2B2B"  # rio's grey with the lights off
+
+# ── ink ───────────────────────────────────────────────────────────────
+foreground      = "#E8E8D0"  # acme paper, dimmed to ink
+foreground_dim  = "#A3A38A"
+muted           = "#99994C"  # DYellowgreen: rules and scrollbars, unchanged
+
+# ── interaction ───────────────────────────────────────────────────────
+selection       = "#3D3D1F"  # DDarkyellow at night
+selection_alt   = "#1E4646"  # DPalegreygreen at night
+border_active   = "#8888CC"  # DPurpleblue, unchanged
+border_inactive = "#2A3360"
+accent          = "#EEEE9E"  # DDarkyellow: the acme highlight as a lamp
+cursor          = "#EEEE9E"
+
+# ── ANSI 0-7 ──────────────────────────────────────────────────────────
+black           = "#1F2850"
+red             = "#F07A7A"
+green           = "#9EDE9E"  # DPalegreen, softened
+yellow          = "#EEEE9E"  # DDarkyellow
+blue            = "#9A9AE0"  # DPurpleblue, lifted for text
+magenta         = "#D69AD6"
+cyan            = "#9EEEEE"  # DPalegreygreen
+white           = "#C8C8B4"
+
+# ── ANSI 8-15 ─────────────────────────────────────────────────────────
+bright_black    = "#7A82A8"
+bright_red      = "#FFA0A0"
+bright_green    = "#AAFFAA"  # DPalegreen
+bright_yellow   = "#FFFFAA"  # DPaleyellow
+bright_blue     = "#B8B8FF"
+bright_magenta  = "#EEB8EE"
+bright_cyan     = "#AAFFFF"  # DPalebluegreen
+bright_white    = "#FFFFEA"  # acme paper
+
+# ── diff backgrounds ──────────────────────────────────────────────────
+diff_add        = "#1C3A2A"
+diff_delete     = "#46202A"
+
+# ── green-bar printout wallpaper ──────────────────────────────────────
+printout_paper  = "#0E1430"
+printout_bar    = "#142B33"
+printout_rule   = "#2C4A4E"
+printout_ink    = "#D6D6BE"

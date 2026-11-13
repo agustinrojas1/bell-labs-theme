@@ -1,0 +1,31 @@
+# Bell Labs — starship, "bell" style: the Bourne shell (V7 UNIX, 1979).
+# `[user@host:dir]$ `, with `#` in red for root.
+add_newline = false
+format = "[\\[](bold {{green}})$username[@](bold {{green}})$hostname[:](bold {{green}})$directory[\\]](bold {{green}})$git_branch$character"
+
+[username]
+show_always = true
+format = "[$user]($style)"
+style_user = "bold {{green}}"
+style_root = "bold {{red}}"
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style)"
+style = "bold {{green}}"
+
+[directory]
+format = "[$path]($style)"
+style = "bold {{accent}}"
+truncation_length = 3
+truncation_symbol = "…/"
+home_symbol = "~"
+
+[git_branch]
+format = " [$branch]($style)"
+style = "{{foreground_dim}}"
+
+[character]
+success_symbol = "[\\$](bold {{foreground}})"
+error_symbol = "[\\$](bold {{red}})"
+vimcmd_symbol = "[:](bold {{accent}})"
